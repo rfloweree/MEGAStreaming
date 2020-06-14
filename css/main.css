@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+:root{
+  --mainBlue:#40ACF1;
+  --transparentBlue:rgba(64, 172, 241,0.7);
+  --mainWhite:#FFFFFF;
+  --mainBlack:#292F36;
+  --mainGrey:rgb(216, 214, 214);
+}
+
+
+body{
+  font-family: 'Roboto', sans-serif;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+}
+
+
+
+/* preloader */
+.preloader{
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background: var(--mainWhite);
+  z-index: 999;
+}
+.hidePreloader{
+  display: none!important;
+}
+/* end preloader */
+
+
+
+/* navbar */
+.navlogo img{
+  width: 250px;
+  height: auto;
+}
+.navbar-form{
+  padding-left: 75px;
+}
+.nav-item{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.navbar{
+  background: var(--mainWhite);
+}
+.navbar-icon{
+  font-size: 2rem;
+  color: var(--mainBlue);
+}
+.nav-active {
+  border-bottom: 0.1rem solid var(--mainBlack);
+}
+.navbar-toggler{
+  outline-color: var(--mainBlue)!important;
+}
+.nav-link{
+  color: var(--mainBlack);
+  text-transform: capitalize;
+}
+.nav-link:hover{
+  color: var(--mainBlue);
+}
+.nav-icon{
+  font-size: 1.5rem;
+  color: var(--mainBlue);
+  text-decoration: none!important;
+  transition-property: color;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+}
+.nav-icon:hover{
+  color: var(--mainBlack);
+}
+/* end navbar */
+
+
+
+/* header */
+.header{
+  color:var(--mainWhite);
+  overflow: hidden;
+}
+.height-max{
+  min-height: calc(90vh - 76px);
+/* end header */
+
+
+
+/* background:url('../img/landing.png'); */
+  background: linear-gradient(rgba(0, 0, 50, 0.6),rgb(3,45,168, 0.6)), url('../img/landing.png');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+/* end background */
+
+
+
+/* landing page left - streaming service provider logos */
+.horizontal-line{
+  border-width:5px;  
+  border-right-style:groove;
+}
+/* end landing page left */
+
+
+
+/* landing page right - titles and tagline */
+.tag-line{
+  margin: 20px;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.title-heading{
+  background: rgba(0,0,0,0.4);
+  border-left: 0.3rem solid var(--mainBlue);
+}
+.title{
+  font-weight: 700;
+  font-size: 1.9rem;
+}
+@media screen and (min-width:768px){
+  .title{
+    font-size: 3rem;
+  }
+}
+.title-icon{
+  color: var(--mainBlue);
+  text-decoration: none!important;
+}
+.title-icon:hover{
+  color: var(--mainBlue);
+  opacity: 0.6;
+}
+/* end landing page right */
+
+
+
+/* buttons */
+.btn-xl{
+  padding: 10px 20px;
+  font-size: 30px;
+  border-radius: 20px;
+  margin: 20px;
+}
+/* endbuttons */
+
+
+/* select page header */
+.banner-select {
+  min-height: 10vh;
+}
+/* end select page header */
+
+
+/* select page dropdown boxes */
+
+.dropdown-magin{
+  margin-right: 75px;
+  margin-bottom: 25px;
+}
+
+
+
+/* select page dropdown boxes */
+
+
+/* footer */
+.footer{
+background: var(--mainWhite);
+position:absolute;
+bottom:0;
+width:100%;
+height:5px;   /* Height of the footer */
+}
+.footer-icon{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--mainYellow);
+  transition: all 1s ease-in-out;
+}
+.footer-icon:hover{
+  color: var(--mainBlue);
+}
+/* end footer */
