@@ -27,7 +27,13 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
     <title>MEGAStreaming</title>
-
+    <style>
+      .manage-subscriptions {
+        display: block;
+        width: fit-content;
+        margin: 0 auto 1em;
+      }
+    </style>
   </head>
 
   <body>
@@ -186,7 +192,7 @@
 
                 <fieldset class="fs-border">
                   <legend class="fs-legend"><b>Streaming Services Subscriptions</b></legend>
-
+                  <a href="/subscriptions.html" class="btn btn-primary manage-subscriptions">Manage Subscriptions</a>
                     <canvas id="myChart" width="400" height="400"></canvas>
                     <script>
                       var ctx = document.getElementById('myChart').getContext('2d');
