@@ -1,109 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" 
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+          crossorigin="anonymous">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <title>MEGAStreaming</title>
+
+  </head>
+
+  <body>
+
+    <!-- ============================================================================================ -->
+    <!-- preloader -->
+    <!-- ============================================================================================ -->
     
-  <!-- bootstrap css -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
- 
-  <!-- main css -->
-  <link rel="stylesheet" href="css/main.css">
-  
-  <!-- google fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
-
-  <!-- font awesome -->
-  <script src="js/fontAwesome.js"></script>
-
-  <title>MEGAStreaming</title>
-
-</head>
-
-<body>
-
-  <!-- ============================================================================================ -->
-  <!-- preloader -->
-  <!-- ============================================================================================ -->
-  
-  <div class="preloader d-flex justify-content-center align-items-center">
-    <img src="img/preloader.gif" alt="preloader">
-  </div>
-
-  <!-- end preloader -->
-
-
-  <!-- ============================================================================================ -->
-  <!-- Nav bar -->
-  <!-- ============================================================================================ -->
-
-  <nav class="navbar navbar-expand-lg px-3 navlogo" id="navBar">
-    
-    <!-- Logo section -->
-    <a href="index.html" class="navbar-brand">
-      <img src="img/logo.png" alt="logo">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle='collapse' data-target='#myNav'>
-      <span class="navbar-icon">
-        <i class="fas fa-bars"></i>
-      </span>
-    </button>
-
-    <!-- end logo section -->
-
-    <!-- Menu section -->
-    <div class="collapse navbar-collapse" id="myNav">
-
-      <ul class="navbar-nav mx-auto">
-
-        <li class="nav-item">
-          <a href="select.html" class="nav-link">
-            Movies/Shows
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="watchlist.html" class="nav-link">
-            Watch List
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="settings.html" class="nav-link">
-            Settings
-          </a>
-        </li>
-      
-        <!-- search box -->
-        <form class="navbar-form navbar-left" action="/action_page.php">
-          <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search" name="search">
-              <div class="input-group-btn">
-                  <button class="btn btn-default" type="submit">
-                      <i class="fas fa-search"></i>
-                  </button>
-              </div>
-          </div>
-        </form>
-   
-      </ul>
-        <!-- end search box -->
-      
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item active nav-active">
-          <a href="account.html" class="nav-link">
-            Account
-          </a>
-        </li>
-      </ul>
-    
+    <div class="preloader d-flex justify-content-center align-items-center">
+      <img src="img/preloader.gif" alt="preloader">
     </div>
-    <!-- end menu section -->
 
-  </nav>
-  <!-- end of nav bar -->
+    <!-- end preloader -->
+
+
+    <!-- ============================================================================================ -->
+    <!-- Nav bar -->
+    <!-- ============================================================================================ -->
+
+    <nav class="navbar navbar-expand-lg navlogo">
+      
+      <!-- logo section -->
+      <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>
+      <!-- end logo section -->
+
+      <!-- responsive menu - turns into hamburger icon -->
+      <button class="navbar-toggler" type="button" data-toggle='collapse' data-target='#myNav'>
+        <span class="navbar-icon"><i class="fas fa-bars"></i></span>
+      </button>
+      <!-- end responsive menu - hamburger icon  -->
+
+      <!-- menu section -->
+      <div class="collapse navbar-collapse" id="myNav">
+
+        <ul class="navbar-nav mx-auto"> <!-- horizontal centering -->
+          <li class="nav-item active navactive"><a href="select.html" class="nav-link">Movies/Shows</a></li>
+          <li class="nav-item"><a href="watchlist.html" class="nav-link">Watch List</a></li>
+          <li class="nav-item"><a href="settings.html" class="nav-link">Settings</a></li>
+        
+          <!-- search box -->
+          <form class="navbar-form navbar-left">
+            <div class="input-group">
+                <input type="text" id="myInput" class="form-control" placeholder="Search" name="search">
+                <div class="input-group-btn">
+                    <button id="searchBtnID" class="searchBtn btn btn-default" type="text">
+                      <a href="select.html" ></a>
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+          </form>
+    
+        </ul>
+          <!-- end search box -->
+
+
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a href="account.html" class="nav-link">
+              Account
+            </a>
+          </li>
+        </ul>
+      
+      </div>
+      <!-- end menu section -->
+
+    </nav>
+    <!-- end of nav bar -->
 
 
   <!-- ============================================================================================ -->
@@ -139,8 +127,9 @@
   <!-- ============================================================================================ -->
   
   <footer class="footer py-5">
-    <div class="footer-icons d-flex justify-content-around">
-      <p>MEGAStreaming Inc © 2020 All Rights Reserved</p>
+    <div class="justify-content-around">
+      <hr>
+      <p class="copyright">MEGAStreaming Inc © 2020 All Rights Reserved</p>
     </div>
   </footer>
 
@@ -148,15 +137,28 @@
 
 
 
-  <!-- ============================================================================================ -->
-  <!-- jquery -->
-  <!-- ============================================================================================ -->
+    <!-- ============================================================================================ -->
+    <!-- JavaScript, jQuery, Bootstrap.js -->
+    <!-- ============================================================================================ -->
 
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <!-- bootstrap js -->
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <!-- script js -->
-  <script src="js/script.js"></script>
+    <!-- JavaScript -->
+    <script type = "text/javascript" src="js/script.js"></script>
+
+    <!-- Bootstrap: jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+            crossorigin="anonymous">
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+            crossorigin="anonymous">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
+            crossorigin="anonymous">
+    </script>
 
 </body>
 

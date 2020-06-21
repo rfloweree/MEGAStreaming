@@ -1,254 +1,570 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- bootstrap css -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" 
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+          crossorigin="anonymous">
 
-  <!-- main css -->
-  <link rel="stylesheet" href="css/main.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css">
 
-  <!-- google fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
 
-  <!-- font awesome -->
-  <script src="js/fontAwesome.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" 
+          href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" 
+          crossorigin="anonymous">
 
-  <title>MEGAStreaming</title>
-
-</head>
-
-<body>
-
-  <!-- ============================================================================================ -->
-  <!-- preloader -->
-  <!-- ============================================================================================ -->
-  
-  <div class="preloader d-flex justify-content-center align-items-center">
-    <img src="img/preloader.gif" alt="preloader">
-  </div>
-
-  <!-- end preloader -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+      crossorigin="anonymous">
+    </script>
 
 
- <!-- ============================================================================================ -->
-  <!-- Nav bar -->
-  <!-- ============================================================================================ -->
+    <title>MEGAStreaming</title>
 
-  <nav class="navbar navbar-expand-lg px-3 navlogo" id="navBar">
+  </head>
+
+  <body>
+
+    <!-- ============================================================================================ -->
+    <!-- preloader -->
+    <!-- ============================================================================================ -->
     
-    <!-- Logo section -->
-    <a href="index.html" class="navbar-brand">
-      <img src="img/logo.png" alt="logo">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle='collapse' data-target='#myNav'>
-      <span class="navbar-icon">
-        <i class="fas fa-bars"></i>
-      </span>
-    </button>
-
-    <!-- end logo section -->
-
-
-
-    <!-- Menu section -->
-    <div class="collapse navbar-collapse" id="myNav">
-
-      <ul class="navbar-nav mx-auto">
-
-        <li class="nav-item active nav-active">
-          <a href="select.html" class="nav-link">
-            Movies/Shows
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="watchlist.html" class="nav-link">
-            Watch List
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="settings.html" class="nav-link">
-            Settings
-          </a>
-        </li>
-      
-        <!-- search box -->
-        <form class="navbar-form navbar-left" action="/action_page.php">
-          <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search" name="search">
-              <div class="input-group-btn">
-                  <button class="btn btn-default" type="submit">
-                      <i class="fas fa-search"></i>
-                  </button>
-              </div>
-          </div>
-        </form>
-   
-      </ul>
-        <!-- end search box -->
-      
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item">
-          <a href="account.html" class="nav-link">
-            Account
-          </a>
-        </li>
-      </ul>
-    
+    <div class="preloader d-flex justify-content-center align-items-center">
+      <img src="img/preloader.gif" alt="preloader">
     </div>
-    <!-- end menu section -->
 
-  </nav>
-  <!-- end of nav bar -->
+    <!-- end preloader -->
 
 
+    <!-- ============================================================================================ -->
+    <!-- Nav bar -->
+    <!-- ============================================================================================ -->
 
-  <!-- ============================================================================================ -->
-  <!-- Title -->
-  <!-- ============================================================================================ -->
+    <nav class="navbar navbar-expand-lg navlogo">
+      
+      <!-- logo section -->
+      <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>
+      <!-- end logo section -->
 
-  <div class="banner-select d-flex align-items-center justify-content-center pl-3 pl-lg-5 text-center">
-      <h1>
-        What do you feel like watching?
-      </h1>
-  </div>
+      <!-- responsive menu - turns into hamburger icon -->
+      <button class="navbar-toggler" type="button" data-toggle='collapse' data-target='#myNav'>
+        <span class="navbar-icon"><i class="fas fa-bars"></i></span>
+      </button>
+      <!-- end responsive menu - hamburger icon  -->
 
-  <!-- end of title -->
+      <!-- menu section -->
+      <div class="collapse navbar-collapse" id="myNav">
+
+        <ul class="navbar-nav mx-auto"> <!-- horizontal centering -->
+          <li class="nav-item active navactive"><a href="select.html" class="nav-link">Movies/Shows</a></li>
+          <li class="nav-item"><a href="watchlist.html" class="nav-link">Watch List</a></li>
+          <li class="nav-item"><a href="settings.html" class="nav-link">Settings</a></li>
+        
+          <!-- search box -->
+          <form>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search">
+                <div class="input-group-btn">
+                    <button class="js-searchBtn btn btn-default" type="button">
+                      <a href="select.html" ></a>
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+          </form>
+    
+        </ul>
+          <!-- end search box -->
+
+
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a href="account.html" class="nav-link">
+              Account
+            </a>
+          </li>
+        </ul>
+      
+      </div>
+      <!-- end menu section -->
+
+    </nav>
+    <!-- end of nav bar -->
 
 
 
-  <!-- ============================================================================================ -->
-  <!-- Dropdown Boxes -->
-  <!-- ============================================================================================ -->
+    <!-- ============================================================================================ -->
+    <!-- Title -->
+    <!-- ============================================================================================ -->
 
-  <div class="container-fluid align-items-center justify-content-center">
+    <div class="banner-select d-flex align-items-center justify-content-center pl-3 pl-lg-5 text-center">
+        <h1>
+          What do you feel like watching?
+        </h1>
+    </div>
+
+    <!-- end of title -->
+
+
+
+    <!-- ============================================================================================ -->
+    <!-- Dropdown Boxes -->
+    <!-- ============================================================================================ -->
+
+    <div class="container-fluid align-items-center justify-content-center">
 
 
       <div class="dropdown">
 
-        <table>
+        <table id="myDropdown">
           <tr>
+
+            <td>
+              <label>Filter by:</label>
+                <select class="choice" id="provider" onchange="providerVal()">
+                    <option value="0" disabled selected>Provider</option>
+                    <option value="All">All<br />
+                    <option value="Amazon Prime">Amazon Prime<br />
+                    <option value="Disney+">Disney+<br />
+                    <option value="Netflix">Netflix<br />
+                    <option value="Hulu">Hulu<br />
+                    <option value="Pluto TV">Pluto TV<br />
+                </select>
+            </td>
+
               <td>
                   <label>Filter by:</label>
-                  <select class="answer-choice dropdown-magin" id="type">
+                  <select class="choice" id="type" name="type" onchange="typeVal()">
                       <option value="0" disabled selected>Type</option>
-                      <option value="1">All<br />
-                      <option value="2">TV Shows<br />
-                      <option value="3">Movies<br />
-                      <option value="4">Music<br />
+                      <option value="All">All<br />
+                      <option value="TV Shows">TV Shows<br />
+                      <option value="Movies">Movies<br />
+                      <option value="Music">Music<br />
                   </select>
               </td>
 
               <td>
                 <label>Filter by:</label>
-                  <select class="answer-choice dropdown-magin" id="genre">
+                  <select class="choice" id="genre" onchange="genreVal()">
                       <option value="0" disabled selected>Genre</option>
-                      <option value="1">All<br />
-                      <option value="2">Comedy<br />
-                      <option value="3">Drama<br />
-                      <option value="4">Science Fiction<br />
+                      <option value="All">All<br />
+                      <option value="Animation">Animation<br />
+                      <option value="Comedy">Comedy<br />
+                      <option value="Drama">Drama<br />
+                      <option value="Sci-Fi">Sci-Fi<br />
                   </select>
               </td>
 
               <td>
                 <label>Filter by:</label>
-                  <select class="answer-choice dropdown-magin" id="actor">
+                  <select class="choice" id="actor" onchange="actorVal()">
                       <option value="0" disabled selected>Actor</option>
-                      <option value="1">All<br />
-                      <option value="2">Brad Pitt<br />
-                      <option value="3">Claire Danes<br />
-                      <option value="4">Denzel Washington<br />
-                      <option value="5">James Earl Jones<br />
-                      <option value="1">Leonardo DiCaprio<br />
-                      <option value="2">Owen Wilson<br />
-                      <option value="3">Robert Downey Jr<br />
-                      <option value="4">Steve Carell<br />
-                      <option value="5">Tom Hanks<br />
-                      <option value="5">Various<br />
-                  </select>
-              </td>
-
-              <td>
-                <label>Filter by:</label>
-                  <select class="answer-choice dropdown-magin" id="provider">
-                      <option value="0" disabled selected>Provider</option>
-                      <option value="1">All<br />
-                      <option value="2">Disney+<br />
-                      <option value="3">Netflix<br />
-                      <option value="4">Hulu<br />
-                      <option value="5">Pluto TV<br />
+                      <option value="All">All<br />
+                      <option value="Brad Pitt">Brad Pitt<br />
+                      <option value="Claire Danes">Claire Danes<br />
+                      <option value="Denzel Washington">Denzel Washington<br />
+                      <option value="James Earl Jones">James Earl Jones<br />
+                      <option value="Leonardo DiCaprio">Leonardo DiCaprio<br />
+                      <option value="Ludwig van Beethoven">Ludwig van Beethoven<br />
+                      <option value="Owen Wilson">Owen Wilson<br />
+                      <option value="obert Downey Jr">Robert Downey Jr<br />
+                      <option value="Steve Carell">Steve Carell<br />
+                      <option value="Tom Hanks">Tom Hanks<br />
                   </select>
               </td>
 
           </tr>
         </table>
 
+    </div>
 
-  </div>
+    <!-- end of dropdown boxes -->
 
- <!-- end of dropdown boxes -->
+    <!-- ============================================================================================ -->
+    <!-- Table -->
+    <!-- ============================================================================================ -->
 
-  <!-- ============================================================================================ -->
-  <!-- Table -->
-  <!-- ============================================================================================ -->
+    <div class="table-responsive tbl-content">
 
-    <div class="table-responsive">
-
-      <table class="table" id="select-table">
+      <!-- <table class="table" id="select-table"> -->
+      
+        <table id="myTable" data-toggle="table" class="display table table-striped table-bordered table-sm" cellspacing="0" width="100%">
 
         <thead class="thead-light">
-          <tr>
-            <th scope="col">Provider</th>
-            <th scope="col">Type</th>
-            <th scope="col">Genre</th>
-            <th scope="col">Year</th>
-            <th scope="col">Actor</th>
-            <th scope="col">Title</th>
-            <th scope="col">Summary</th>
-            <th scope="col">Rating</th>
-            <th scope="col">Watch List</th>
-            <th scope="col">Watch</th>
+          <tr class="header">
+            <th>Provider</th>
+            <th>Type</th>
+            <th>Genre</th>
+            <th>Year</th>
+            <th>Actor</th>
+            <th>Title</th>
+            <th>Summary</th>
+            <th>Rating</th>
+            <th>Watch List</th>
+            <th>Watch</th>
             </tr>
         </thead>
 
+        
         <tbody class="tableBody" id="tableId">
 
-        </tbody>
+          <tr>
+            <td>Netflix, Prime Video</td>
+            <td>Movies</td>
+            <td>Drama</td>
+            <td>2008</td>
+            <td>Brad Pitt</td>
+            <td>The Curious Case of Benjamin Button</td>
+            <td>Born under unusual circumstances, Benjamin Button springs into being as an elderly man in a New Orleans nursing home and ages in reverse. </td>
+            <td>PG-13</td>
+            <td>
+              <div class="label-right">
+                <label class="switch">
+                <input type="checkbox" class="watch-list" checked="checked">
+                <span class="slider round"></span>
+                </label>
+                <p id=wl-spacer>Add</p>
+              </div>
+            </td>
+            <td><a href="watchshows.html" class="btn btn-secondary">Watch</a></td>
+          </tr>
+
+          <tr>
+            <td>Prime Video</td>
+            <td>Movies</td>
+            <td>Drama</td>
+            <td>2001</td>
+            <td>Brad Pitt</td>
+            <td>Ocean's Eleven</td>
+            <td>Less than 24 hours into his parole, charismatic thief Danny Ocean is already rolling out his next plan.</td>
+            <td>PG-13</td>
+            <td>
+              <div class="label-right">
+                <label class="switch">
+                <input type="checkbox" class="watch-list">
+                <span class="slider round"></span>
+                </label>
+                <p id=wl-spacer>Add</p>
+              </div>
+            </td>
+            <td><a href="watchshows.html" class="btn btn-secondary">Resume</a></td>
+          </tr>
+
+          <tr>
+            <td>Prime Video</td>
+            <td>Movies</td>
+            <td>Drama</td>
+            <td>1989</td>
+            <td>Denzel Washington</td>
+            <td>Glory</td>
+            <td>Robert Gould Shaw leads the US Civil War's first all-black volunteer company, fighting prejudices of both his own Union army and the Confederates.</td>
+            <td>R</td>
+            <td>
+              <div class="label-right">
+                <label class="switch">
+                <input type="checkbox" class="watch-list">
+                <span class="slider round"></span>
+                </label>
+                <p id=wl-spacer>Add</p>
+              </div>
+            </td>
+            <td><a href="watchshows.html" class="btn btn-secondary">Watch</a></td>
+          </tr>
+
+          <tr>
+            <td>Hulu</td>
+            <td>Movies</td>
+            <td>Drama</td>
+            <td>2012</td>
+            <td>Denzel Washington</td>
+            <td>Flight</td>
+            <td>Commercial airline pilot Whip Whitaker has a problem with drugs and alcohol, though so far he's managed to complete his flights safely.</td>
+            <td>R</td>
+            <td>
+              <div class="label-right">
+                <label class="switch">
+                <input type="checkbox" class="watch-list">
+                <span class="slider round"></span>
+                </label>
+                <p id=wl-spacer>Add</p>
+              </div>
+            </td>
+            <td><a href="watchshows.html" class="btn btn-secondary">Watch</a></td>
+          </tr>
+
+          <tr>
+            <td>Pluto TV</td>
+            <td>TV Shows</td>
+            <td>Drama</td>
+            <td>2011</td>
+            <td>Claire Danes</td>
+            <td>Homeland</td>
+            <td>CIA officer Carrie Mathison is tops in her field despite being bipolar, which makes her volatile and unpredictable</td>
+            <td>TV-PG</td>
+            <td>
+              <div class="label-right">
+                <label class="switch">
+                <input type="checkbox" class="watch-list">
+                <span class="slider round"></span>
+                </label>
+                <p id=wl-spacer>Add</p>
+              </div>
+            </td>
+            <td><a href="watchshows.html" class="btn btn-secondary">Watch</a></td>
+          </tr>
+
+          <tr>
+            <td>Netflix</td>
+            <td>TV Shows</td>
+            <td>Comedy</td>
+            <td>2005</td>
+            <td>Steve Carell</td>
+            <td>The Office</td>
+            <td>The everyday lives of office employees in the Scranton, Pennsylvania branch of the fictional Dunder Mifflin Paper Company.</td>
+            <td>TV-14</td>
+            <td>
+              <div class="label-right">
+                <label class="switch">
+                <input type="checkbox" class="watch-list">
+                <span class="slider round"></span>
+                </label>
+                <p id=wl-spacer>Add</p>
+              </div>
+            </td>
+            <td><a href="watchshows.html" class="btn btn-secondary">Watch</a></td>
+          </tr>
+
+          <tr>
+            <td>Disney+</td>
+            <td>Movies</td>
+            <td>Animation</td>
+            <td>2006</td>
+            <td>Owen Wilson</td>
+            <td>Cars</td>
+            <td>Lightning McQueen, a hotshot rookie race car driven to succeed, discovers that life is about the journey, not the finish line, when he finds himself unexpectedly detoured in the sleepy Route 66 town of Radiator Springs.</td>
+            <td>G</td>
+            <td>
+              <div class="label-right">
+                <label class="switch">
+                <input type="checkbox" class="watch-list">
+                <span class="slider round"></span>
+                </label>
+                <p id=wl-spacer>Add</p>
+              </div>
+            </td>
+            <td><a href="watchshows.html" class="btn btn-secondary">Watch</a></td>
+          </tr>
+
+          <tr>
+            <td>Netflix</td>
+            <td>Movies</td>
+            <td>Sci-Fi</td>
+            <td>2010</td>
+            <td>Leonardo DiCaprio</td>
+            <td>Inception</td>
+            <td>Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: inception, the implantation of another person's idea into a target's subconscious.</td>
+            <td>PG-13</td>
+            <td>
+              <div class="label-right">
+                <label class="switch">
+                <input type="checkbox" class="watch-list">
+                <span class="slider round"></span>
+                </label>
+                <p id=wl-spacer>Add</p>
+              </div>
+            </td>
+            <td><a href="watchshows.html" class="btn btn-secondary">Watch</a></td>
+          </tr>
+
+          <tr>
+            <td>Disney+</td>
+            <td>Movies</td>
+            <td>Animation</td>
+            <td>2019</td>
+            <td>James Earl Jones</td>
+            <td>The Lion King</td>
+            <td>A young lion prince is cast out of his pride by his cruel uncle, who claims he killed his father. </td>
+            <td>G</td>
+            <td>
+              <div class="label-right">
+                <label class="switch">
+                <input type="checkbox" class="watch-list">
+                <span class="slider round"></span>
+                </label>
+                <p id=wl-spacer>Add</p>
+              </div>
+            </td>
+            <td><a href="watchshows.html" class="btn btn-secondary">Watch</a></td>
+          </tr>
+
+          <tr>
+            <td>Disney+</td>
+            <td>Movies</td>
+            <td>Animation</td>
+            <td>2019</td>
+            <td>Tom Hanks</td>
+            <td>Toy Story 4</td>
+            <td>Woody has always been confident about his place in the world and that his priority is taking care of his kid, whether that's Andy or Bonnie.</td>
+            <td>G</td>
+            <td>
+              <div class="label-right">
+                <label class="switch">
+                <input type="checkbox" class="watch-list">
+                <span class="slider round"></span>
+                </label>
+                <p id=wl-spacer>Add</p>
+              </div>
+            </td>
+            <td><a href="watchshows.html" class="btn btn-secondary">Watch</a></td>
+          </tr>
+
+          <tr>
+            <td>Disney+</td>
+            <td>Movies</td>
+            <td>Comedy</td>
+            <td>2001</td>
+            <td>Anne Hathaway</td>
+            <td>The Princess Diaries</td>
+            <td>A socially awkward but very bright 15-year-old girl being raised by a single mom discovers that she is the princess of a small European country.</td>
+            <td>G</td>
+            <td>
+              <div class="label-right">
+                <label class="switch">
+                <input type="checkbox" class="watch-list">
+                <span class="slider round"></span>
+                </label>
+                <p id=wl-spacer>Add</p>
+              </div>
+            </td>
+            <td><a href="watchshows.html" class="btn btn-secondary">Watch</a></td>
+          </tr>
+
+          <tr>
+            <td>Amazon Prime</td>
+            <td>TV Shows</td>
+            <td>Animation</td>
+            <td>2015</td>
+            <td>Various</td>
+            <td>Leo the Truck</td>
+            <td>Leo is a dump truck who is very curious and inquisitive. He loves to build things & see how they work. </td>
+            <td>G</td>
+            <td>
+              <div class="label-right">
+                <label class="switch">
+                <input type="checkbox" class="watch-list">
+                <span class="slider round"></span>
+                </label>
+                <p id=wl-spacer>Add</p>
+              </div>
+            </td>
+            <td><a href="watchshows.html" class="btn btn-secondary">Watch</a></td>
+          </tr>
+
+          <tr>
+            <td>Pluto TV</td>
+            <td>TV Shows</td>
+            <td>Animation</td>
+            <td>2020</td>
+            <td>Various</td>
+            <td>Trucktown</td>
+            <td>A children's show where animated trucks have adventures and learn some lessons in a world completely inhabited by living trucks and other machinery.</td>
+            <td>G</td>
+            <td>
+              <div class="label-right">
+                <label class="switch">
+                <input type="checkbox" class="watch-list">
+                <span class="slider round"></span>
+                </label>
+                <p id=wl-spacer>Add</p>
+              </div>
+            </td>
+            <td><a href="watchshows.html" class="btn btn-secondary">Watch</a></td>
+          </tr>
+
+          <tr>
+            <td>Disney+</td>
+            <td>Movies</td>
+            <td>Sci-Fi</td>
+            <td>2019</td>
+            <td>Robert Downey Jr.</td>
+            <td>Avengers: Endgame</td>
+            <td>After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos.</td>
+            <td>PG-13</td>
+            <td>
+              <div class="label-right">
+                <label class="switch">
+                <input type="checkbox" class="watch-list">
+                <span class="slider round"></span>
+                </label>
+                <p id=wl-spacer>Add</p>
+              </div>
+            </td>
+            <td><a href="watchshows.html" class="btn btn-secondary">Watch</a></td>
+          </tr>
+
+
+          <tr>
+            <td>Amazon Prime</td>
+            <td>Music</td>
+            <td>Classical</td>
+            <td>1808</td>
+            <td>Ludwig van Beethoven</td>
+            <td>Symphony No. 5</td>
+            <td>Symphony No 5 in C minor it is one of the best-known compositions in classical music and one of the most frequently played symphonies.  It is widely considered one of the cornerstones of western music.</td>
+            <td>All Ages</td>
+            <td>
+              <div class="label-right">
+                <label class="switch">
+                <input type="checkbox" class="watch-list">
+                <span class="slider round"></span>
+                </label>
+                <p id=wl-spacer>Add</p>
+              </div>
+            </td>
+            <td><a href="watchshows.html" class="btn btn-secondary">Watch</a></td>
+          </tr>
+
+          </tbody>
+
 
       </table>
     </div>
 
 
- <!-- end of table -->
+    <!-- end of table -->
 
-  <!-- ============================================================================================ -->
-  <!-- footer -->
-  <!-- ============================================================================================ -->
-   
-  <footer class="footer py-5">
-    <div class="footer-icons d-flex justify-content-around">
-      <p>MEGAStreaming Inc © 2020 All Rights Reserved</p>
-    </div>
-  </footer>
+    <!-- ============================================================================================ -->
+    <!-- footer -->
+    <!-- ============================================================================================ -->
+    
+    <footer class="footer">
+      <div class="justify-content-around">
+        <hr>
+        <p class="copyright">MEGAStreaming Inc © 2020 All Rights Reserved</p>
+      </div>
+    </footer>
 
 
 
-  <!-- ============================================================================================ -->
-  <!-- jquery -->
-  <!-- ============================================================================================ -->
+    <!-- ============================================================================================ -->
+    <!-- JavaScript, jQuery, Bootstrap.js -->
+    <!-- ============================================================================================ -->
 
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <!-- bootstrap js -->
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <!-- script js -->
-  <script src="js/script.js"></script>
+    <!-- JavaScript -->
+    <script type = "text/javascript" src="js/script.js"></script>
 
-</body>
+  </body>
 
 </html>

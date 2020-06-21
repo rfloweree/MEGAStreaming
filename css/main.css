@@ -9,279 +9,356 @@
 }
 
 
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
 body{
   font-family: 'Roboto', sans-serif;
   color: var(--mainBlack);
   background: var(--mainWhite);
+  
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  
 }
 
 
-
+/* =================================================================================== */
 /* preloader */
-.preloader{
-  position: fixed;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  background: var(--mainWhite);
-  z-index: 999;
-}
-.hidePreloader{
-  display: none!important;
-}
-/* end preloader */
+/* =================================================================================== */
+
+  .preloader{
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background: var(--mainWhite);
+    z-index: 999;
+    }
+  .hidePreloader{
+    display: none!important;
+    }
 
 
 
-/* navbar */
-.navlogo img{
-  width: 250px;
-  height: auto;
-}
-.navbar-form{
-  padding-left: 75px;
-}
-.nav-item{
-  padding-left: 25px;
-  padding-right: 25px;
-}
-.navbar{
-  background: var(--mainWhite);
-}
-.navbar-icon{
-  font-size: 2rem;
-  color: var(--mainBlue);
-}
-.nav-active {
-  border-bottom: 0.1rem solid var(--mainBlack);
-}
-.navbar-toggler{
-  outline-color: var(--mainBlue)!important;
-}
-.nav-link{
-  color: var(--mainBlack);
-  text-transform: capitalize;
-}
-.nav-link:hover{
-  color: var(--mainBlue);
-}
-.nav-icon{
-  font-size: 1.5rem;
-  color: var(--mainBlue);
-  text-decoration: none!important;
-  transition-property: color;
-  transition-duration: 2s;
-  transition-timing-function: linear;
-}
-.nav-icon:hover{
-  color: var(--mainBlack);
-}
+/* =================================================================================== */
+/* navbar                                                                              */
+/* =================================================================================== */
+
+  /* ------------------- */
+  /* logo section - size */
+  /* ------------------- */
+  .navlogo img{
+    width: 250px;
+    height: auto;
+  }
+
+
+  /* ------------------------- */
+  /* responsive menu hamburger */
+  /* ------------------------- */
+  .navbar-icon{
+    font-size: 2rem;
+    color: var(--mainBlue);
+  }
+
+  .navbar-toggler{
+    outline-color: var(--mainBlue)!important;
+  }
+
+
+  /* ---------------------------- */
+  /* menu section - configuration */
+  /* ---------------------------- */
+  .navbar{
+    background: var(--mainWhite);
+  }
+
+  .nav-item{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .navactive {
+    border-bottom: 0.1rem solid var(--mainBlack);
+  }
+
+
+  /* ------------------------- */
+  /* menu section - page links */
+  /* ------------------------- */
+  .nav-link{
+    color: var(--mainBlack);
+    text-transform: capitalize;
+  }
+
+  .nav-link:hover{
+    color: var(--mainBlue);
+  }
+
+
+  /* ------------------------- */
+  /* menu section - search box */
+  /* ------------------------- */
+  form{
+    padding-left: 75px;
+  }
+
 /* end navbar */
 
 
 
-/* header */
-.header{
-  color:var(--mainWhite);
-  overflow: hidden;
-}
-.height-max{
-  min-height: calc(90vh - 76px);
-/* end header */
+/* =================================================================================== */
+/* landing page background                                                             */
+/* =================================================================================== */
 
-
-
-/* background:url('../img/landing.png'); */
-  background: linear-gradient(rgba(0, 0, 50, 0.6),rgb(3,45,168, 0.6)), url('../img/landing.png');
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-/* end background */
-
-
-
-/* landing page left - streaming service provider logos */
-.horizontal-line{
-  border-width:5px;  
-  border-right-style:groove;
-}
-/* end landing page left */
-
-
-
-/* landing page right - titles and tagline */
-.tag-line{
-  margin: 20px;
-  font-weight: 700;
-  font-size: 2.5rem;
-}
-.title-heading{
-  background: rgba(0,0,0,0.4);
-  border-left: 0.3rem solid var(--mainBlue);
-}
-.title{
-  font-weight: 700;
-  font-size: 1.9rem;
-}
-@media screen and (min-width:768px){
-  .title{
-    font-size: 3rem;
+  .header{
+    color:var(--mainWhite);
+    overflow: hidden;
   }
+
+  .height-max{
+    min-height: calc(90vh - 76px);
+    background: linear-gradient(rgba(0, 0, 50, 0.6),rgb(3,45,168, 0.6)), url('../img/landing.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+/* ---------------------------------------------------- */
+/* landing page left - streaming service logos          */
+/* ---------------------------------------------------- */
+  .horizontal-line{
+    border-width:5px;  
+    border-right-style:groove;
+  }
+
+  /* ------------------ */
+  /* landing page right */
+  /* ------------------ */
+  /* @media screen and (min-width:768px){
+    .title{
+      font-size: 3rem;
+    } */
+
+  .tag-line{
+    margin: 20px;
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+
+  .title-heading{
+    background: rgba(0,0,0,0.4);
+    border-left: 0.3rem solid var(--mainBlue);
+  }
+
+  .title{
+    font-weight: 700;
+    font-size: 1.9rem;
+  }
+
+  .title-icon{
+    color: var(--mainBlue);
+    text-decoration: none!important;
+  }
+  .title-icon:hover{
+    color: var(--mainBlue);
+    opacity: 0.6;
+  }
+
+
+
+
+/* =================================================================================== */
+/* buttons                                                                             */
+/* =================================================================================== */
+
+  .btn-xl{
+    padding: 10px 20px;
+    font-size: 30px;
+    border-radius: 20px;
+    margin: 20px;
+  }
+
+
+
+/* =================================================================================== */
+/* page header                                                                         */
+/* =================================================================================== */
+
+  .banner-select {
+    min-height: 10vh;
+  }
+
+
+
+/* =================================================================================== */
+/* select page - dropdown boxes                                                        */
+/* =================================================================================== */
+
+  .choice{
+    margin-right: 75px;
+    margin-bottom: 25px;
+  }
+
+
+
+/* =================================================================================== */
+/* settings page - fieldset tag boxes                                                  */
+/* =================================================================================== */
+
+  /* ------------------ */
+  /* fieldset tag boxes */
+  /* ------------------ */
+
+  .fs-border {
+    margin-top: 12px;
+    width: 505px;
+    height: auto;
+    border: 3px groove #ddd;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .fs-legend {
+    font-size: 15px;
+    font-weight: normal;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #555;
+    border-bottom: none;
+    padding: 0 10px;
+    width: auto;
+  }
+
+
+  /* ------------------------------------- */
+  /* sliders - movies/shows table          */
+  /* ------------------------------------- */
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* ------------------ */
+  /* rounded sliders    */
+  /* ------------------ */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+
+/* =================================================================================== */
+/* movies/shows page                                                                   */
+/* =================================================================================== */
+
+.tbl-content{
+  margin: 0 auto;
+  padding-top: 64px;
 }
-.title-icon{
-  color: var(--mainBlue);
-  text-decoration: none!important;
-}
-.title-icon:hover{
-  color: var(--mainBlue);
-  opacity: 0.6;
-}
-/* end landing page right */
 
+/* -------------------------------------- */
+/* sliders - Add text to left and spacing */
+/* -------------------------------------- */
 
-
-/* buttons */
-.btn-xl{
-  padding: 10px 20px;
-  font-size: 30px;
-  border-radius: 20px;
-  margin: 20px;
-}
-/* endbuttons */
-
-
-/* select page header */
-.banner-select {
-  min-height: 10vh;
-}
-/* end select page header */
-
-
-/* select page dropdown boxes */
-
-.dropdown-magin{
-  margin-right: 75px;
-  margin-bottom: 25px;
+.label-right{
+  display: flex;
 }
 
-/* select page dropdown boxes */
-
-
-.fs-top {
-  margin-top: 10px;
-}
-
-.fs-border {
-  margin-top: 12px;
-  width: 505px;
-  height: auto;
-  border: 3px groove #ddd;
-  padding: 10px 10px 10px 10px;
-}
-
-.fs-legend {
-  font-size: 15px;
-  font-weight: normal;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #555;
-  border-bottom: none;
-  padding: 0 10px;
-  width: auto;
+#wl-spacer{
+  padding-left: 3px;
+  padding-right: 5px;
 }
 
 
-/* sliders */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
+
+
+/* =================================================================================== */
+/* footer                                                                              */
+/* =================================================================================== */
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #999999;
 }
 
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
+.footer{
   position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  left: 0;
+  padding: 1rem;
+  background: var(--mainWhite);
+
+
 }
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+ 
+.copyright{
+padding-left: 40px;
 }
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-/* end sliders */
-
-
-
-
-
-
-
-
-
-
-
-/* footer */
-.footer{
-background: var(--mainWhite);
-position:absolute;
-bottom:0;
-width:100%;
-height:5px;   /* Height of the footer */
-}
-.footer-icon{
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: var(--mainYellow);
-  transition: all 1s ease-in-out;
-}
-.footer-icon:hover{
-  color: var(--mainBlue);
-}
-/* end footer */
