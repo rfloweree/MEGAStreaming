@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" 
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
           crossorigin="anonymous">
 
     <!-- Main CSS -->
@@ -19,8 +19,8 @@
     <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
-          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
           crossorigin="anonymous">
 
     <!-- chart.js -->
@@ -35,7 +35,7 @@
     <!-- ============================================================================================ -->
     <!-- preloader -->
     <!-- ============================================================================================ -->
-    
+
     <div class="preloader d-flex justify-content-center align-items-center">
       <img src="img/preloader.gif" alt="preloader">
     </div>
@@ -48,7 +48,7 @@
     <!-- ============================================================================================ -->
 
     <nav class="navbar navbar-expand-lg navlogo">
-      
+
       <!-- logo section -->
       <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>
       <!-- end logo section -->
@@ -66,7 +66,7 @@
           <li class="nav-item"><a href="select.html" class="nav-link">Movies/Shows</a></li>
           <li class="nav-item"><a href="watchlist.html" class="nav-link">Watch List</a></li>
           <li class="nav-item"><a href="settings.html" class="nav-link">Settings</a></li>
-        
+
           <!-- search box -->
           <form class="navbar-form navbar-left">
             <div class="input-group">
@@ -79,7 +79,7 @@
                 </div>
             </div>
           </form>
-    
+
         </ul>
           <!-- end search box -->
 
@@ -91,7 +91,7 @@
             </a>
           </li>
         </ul>
-      
+
       </div>
       <!-- end menu section -->
 
@@ -123,27 +123,27 @@
         <!-- ============================================================================================================================= -->
         <!-- Left Side  -->
         <!-- ============================================================================================================================= -->
-   
+
         <div class="container-fluid">
             <div class="row">
 
               <div class="col-sm-4">
-                <fieldset class="fs-border">
+                <fieldset class="fs-border owner-profile">
                   <legend class="fs-legend"><b>Owner Profile</b></legend>
-
-
-
-
-
-                  <!-- Add Owner Profile code here  -->
-
-
-
-
-
-
+                  <div class="form-group">
+                    <label for="user-name">User Name:</label>
+                    <input type="text" id="user-name" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="form-control">
+                  </div>
                 </fieldset>
-              </div> 
+              </div>
 
 
               <!-- ============================================================================================= -->
@@ -154,21 +154,29 @@
 
                 <fieldset class="fs-border">
                   <legend class="fs-legend"><b>Family Member Accounts</b></legend>
-
-
-
-
-
-                  <!-- Add Family Member Accounts code here  -->
-
-
-
-
-
-
+                  <table class="table table-striped table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Child Account</th>
+                        <th scope="col">Add/Edit</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Mrs. Jeb</td><td>No</td><td><a href="/additionalaccounts.html" class="btn btn-primary">Edit</a></td>
+                      </tr>
+                      <tr>
+                        <td>Jeb Jr</td><td>Yes</td><td><a href="/additionalaccounts.html" class="btn btn-primary">Edit</a></td>
+                      </tr>
+                      <tr>
+                        <td></td><td></td><td><a href="/additionalaccounts.html" class="btn btn-primary">Add</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </fieldset>
-              </div> 
-              
+              </div>
+
 
               <!-- ============================================================================================= -->
               <!-- Right Side  -->
@@ -183,7 +191,7 @@
                     <script>
                       var ctx = document.getElementById('myChart').getContext('2d');
                       var myChart = new Chart(ctx, {
-                          type: 'bar',                        
+                          type: 'bar',
                           data: {
                               labels: ['Disney+', 'Hulu', 'Netflix', 'Pluto TV'],
                               datasets: [{
@@ -221,7 +229,7 @@
                                       labelString: 'Streaming Provider'
                                     }
                                 }]
-                              }     
+                              }
                             }
                       });
                     </script>
@@ -237,7 +245,7 @@
   <!-- ============================================================================================ -->
   <!-- footer -->
   <!-- ============================================================================================ -->
-  
+
   <footer class="footer py-5">
     <div class="justify-content-around">
       <hr>
@@ -256,11 +264,11 @@
 
 
     <!-- Bootstrap: jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
             crossorigin="anonymous">
     </script>
-    
+
     <!-- JavaScript -->
     <script type = "text/javascript" src="js/script.js"></script>
 
