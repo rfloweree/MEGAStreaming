@@ -19,7 +19,12 @@
     <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" 
+          crossorigin="anonymous">
+
+    <!-- chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
     <title>MEGAStreaming</title>
 
@@ -178,7 +183,7 @@
                     <script>
                       var ctx = document.getElementById('myChart').getContext('2d');
                       var myChart = new Chart(ctx, {
-                          type: 'bar',
+                          type: 'bar',                        
                           data: {
                               labels: ['Disney+', 'Hulu', 'Netflix', 'Pluto TV'],
                               datasets: [{
@@ -204,10 +209,20 @@
                                   yAxes: [{
                                       ticks: {
                                           beginAtZero: true
-                                      }
-                                  }]
-                              }
-                          }
+                                      },
+                                    scaleLabel: {
+                                      display: true,
+                                      labelString: 'Number of Shows Watched'
+                                    },
+                                }],
+                                xAxes: [{
+                                    scaleLabel: {
+                                      display: true,
+                                      labelString: 'Streaming Provider'
+                                    }
+                                }]
+                              }     
+                            }
                       });
                     </script>
 
@@ -224,7 +239,8 @@
   <!-- ============================================================================================ -->
   
   <footer class="footer py-5">
-    <div class="d-flex justify-content-around">
+    <div class="justify-content-around">
+      <hr>
       <p class="copyright">MEGAStreaming Inc © 2020 All Rights Reserved</p>
     </div>
   </footer>
