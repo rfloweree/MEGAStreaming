@@ -225,6 +225,11 @@ body{
   /* fieldset tag boxes */
   /* ------------------ */
 
+
+  .settings-margin{
+    margin-left: 500px;
+  }
+
   .fs-border {
     margin-top: 12px;
     width: 505px;
