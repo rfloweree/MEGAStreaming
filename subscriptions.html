@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" 
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
           crossorigin="anonymous">
 
     <!-- Main CSS -->
@@ -22,7 +22,18 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <title>MEGAStreaming</title>
-
+    <style>
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+      main > * {
+        flex: 1;
+        margin: 1em;
+        min-width: 505px;
+      }
+    </style>
   </head>
 
   <body>
@@ -30,7 +41,7 @@
     <!-- ============================================================================================ -->
     <!-- preloader -->
     <!-- ============================================================================================ -->
-    
+
     <div class="preloader d-flex justify-content-center align-items-center">
       <img src="img/preloader.gif" alt="preloader">
     </div>
@@ -43,7 +54,7 @@
     <!-- ============================================================================================ -->
 
     <nav class="navbar navbar-expand-lg navlogo">
-      
+
       <!-- logo section -->
       <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>
       <!-- end logo section -->
@@ -61,7 +72,7 @@
           <li class="nav-item"><a href="select.html" class="nav-link">Movies/Shows</a></li>
           <li class="nav-item"><a href="watchlist.html" class="nav-link">Watch List</a></li>
           <li class="nav-item"><a href="settings.html" class="nav-link">Settings</a></li>
-        
+
           <!-- search box -->
           <form class="navbar-form navbar-left">
             <div class="input-group">
@@ -74,7 +85,7 @@
                 </div>
             </div>
           </form>
-    
+
         </ul>
           <!-- end search box -->
 
@@ -86,7 +97,7 @@
             </a>
           </li>
         </ul>
-      
+
       </div>
       <!-- end menu section -->
 
@@ -106,28 +117,66 @@
 
 <!-- end of title -->
 
+    <main>
+      <fieldset class="fs-border">
+        <legend class="fs-legend"><b>Add/Remove Streaming Services</b></legend>
+        <table class="table table-stripped">
+          <thead>
+            <tr>
+              <th scope="col" colspan="2">Subscription Services</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Amazon Prime</th><td></td></tr>
+            <tr><th scope="row">Disney+</th><td>✔</td></tr>
+            <tr><th scope="row">Hulu</th><td>✔</td></tr>
+            <tr><th scope="row">Netflix</th><td>✔</td></tr>
+            <tr><th scope="row">Pluto TV</th><td>✔</td></tr>
+            <tr><th scope="row">YouTube</th><td></td></tr>
+          </tbody>
+        </table>
+      </fieldset>
+      <fieldset class="fs-border">
+        <legend class="fs-legend"><b>Your Subscriptions</b></legend>
+        <table class="table table-stripped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Subscription</th>
+              <th scope="col">Cost</th>
+              <th scope="col">Last Used</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Disney+</th>
+              <td>$6.99</td>
+              <td><time>2020-05-25</time></td>
+            </tr>
+            <tr>
+              <th scope="row">Hulu</th>
+              <td>$5.99</td>
+              <td><time>2020-04-03</time></td>
+            </tr>
+            <tr>
+              <th scope="row">Netflix</th>
+              <td>$8.99</td>
+              <td><time>2020-05-25</time></td>
+            <tr>
+              <th scope="row">Pluto TV</th>
+              <td>$0</td>
+              <td><time>2020-04-29</time></td>
+            </tr>
+          </tbody>
+        </table>
+      </fieldset>
+    </main>
 
-
-  <!-- ============================================================================================ -->
-  <!-- Subscriptions Code Goes Here -->
-  <!-- ============================================================================================ -->
-  
-  
-
-
-
-
-  
- 
-
-
- 
   <!-- ============================================================================================ -->
   <!-- footer -->
   <!-- ============================================================================================ -->
-  
   <footer class="footer py-5">
-    <div class="d-flex justify-content-around">
+    <div class="justify-content-around">
+      <hr>
       <p class="copyright">MEGAStreaming Inc © 2020 All Rights Reserved</p>
     </div>
   </footer>
@@ -144,18 +193,18 @@
     <script type = "text/javascript" src="js/script.js"></script>
 
     <!-- Bootstrap: jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
-            crossorigin="anonymous">
-    </script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
             crossorigin="anonymous">
     </script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
-            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
             crossorigin="anonymous">
     </script>
 
