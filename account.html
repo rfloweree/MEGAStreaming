@@ -33,6 +33,15 @@
         width: fit-content;
         margin: 0 auto 1em;
       }
+      main {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      main > * {
+        flex: 1;
+        margin: 1em;
+        min-width: 505px;
+      }
     </style>
   </head>
 
@@ -126,137 +135,104 @@
   <!-- ============================================================================================ -->
 
 
-        <!-- ============================================================================================================================= -->
-        <!-- Left Side  -->
-        <!-- ============================================================================================================================= -->
-
-        <div class="container-fluid">
-            <div class="row">
-
-              <div class="col-sm-4">
-                <fieldset class="fs-border">
-                  <legend class="fs-legend"><b>Owner Profile</b></legend>
-                  <div class="form-group">
-                    <label for="user-name">User Name:</label>
-                    <input type="text" id="user-name" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" class="form-control">
-                  </div>
-                </fieldset>
-              </div>
-
-
-              <!-- ============================================================================================= -->
-              <!-- Middle  -->
-              <!-- ============================================================================================= -->
-
-              <div class="col-sm-4">
-
-                <fieldset class="fs-border">
-                  <legend class="fs-legend"><b>Family Member Accounts</b></legend>
-                  <table class="table table-striped table-bordered">
-                    <thead>
-                      <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Child Account</th>
-                        <th scope="col">Add/Edit</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Mrs. Jeb</td><td>No</td><td><a href="/additionalaccounts.html" class="btn btn-primary">Edit</a></td>
-                      </tr>
-                      <tr>
-                        <td>Jeb Jr</td><td>Yes</td><td><a href="/additionalaccounts.html" class="btn btn-primary">Edit</a></td>
-                      </tr>
-                      <tr>
-                        <td></td><td></td><td><a href="/additionalaccounts.html" class="btn btn-primary">Add</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </fieldset>
-              </div>
-
-
-              <!-- ============================================================================================= -->
-              <!-- Right Side  -->
-              <!-- ============================================================================================= -->
-
-              <div class="col-sm-4">
-
-                <fieldset class="fs-border">
-                  <legend class="fs-legend"><b>Streaming Services Subscriptions</b></legend>
-                  <a href="/subscriptions.html" class="btn btn-primary manage-subscriptions">Manage Subscriptions</a>
-                    <canvas id="myChart" width="400" height="400"></canvas>
-                    <script>
-                      var ctx = document.getElementById('myChart').getContext('2d');
-                      var myChart = new Chart(ctx, {
-                          type: 'bar',
-                          data: {
-                              labels: ['Disney+', 'Hulu', 'Netflix', 'Pluto TV'],
-                              datasets: [{
-                                  label: 'Usage Comparison',
-                                  data: [20, 30, 50, 40],
-                                  backgroundColor: [
-                                      'rgba(54, 162, 235, 0.2)',
-                                      'rgba(255, 206, 86, 0.2)',
-                                      'rgba(75, 192, 192, 0.2)',
-                                      'rgba(153, 102, 255, 0.2)'
-                                  ],
-                                  borderColor: [
-                                      'rgba(54, 162, 235, 1)',
-                                      'rgba(255, 206, 86, 1)',
-                                      'rgba(75, 192, 192, 1)',
-                                      'rgba(153, 102, 255, 1)'
-                                  ],
-                                  borderWidth: 1
-                              }]
-                          },
-                          options: {
-                              scales: {
-                                  yAxes: [{
-                                      ticks: {
-                                          beginAtZero: true
-                                      },
-                                    scaleLabel: {
-                                      display: true,
-                                      labelString: 'Number of Shows Watched'
-                                    },
-                                }],
-                                xAxes: [{
-                                    scaleLabel: {
-                                      display: true,
-                                      labelString: 'Streaming Provider'
-                                    }
-                                }]
-                              }
-                            }
-                      });
-                    </script>
-
-                </fieldset>
-              </div>
-
-
-            </div>
+  <main>
+    <fieldset class="fs-border">
+      <legend class="fs-legend"><b>Owner Profile</b></legend>
+      <div class="form-group">
+        <label for="user-name">User Name:</label>
+        <input type="text" id="user-name" class="form-control">
       </div>
-
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" class="form-control">
+      </div>
+    </fieldset>
+    <fieldset class="fs-border">
+      <legend class="fs-legend"><b>Family Member Accounts</b></legend>
+      <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Child Account</th>
+          <th scope="col">Add/Edit</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Mrs. Jeb</td><td>No</td><td><a href="/additionalaccounts.html" class="btn btn-primary">Edit</a></td>
+        </tr>
+        <tr>
+          <td>Jeb Jr</td><td>Yes</td><td><a href="/additionalaccounts.html" class="btn btn-primary">Edit</a></td>
+        </tr>
+        <tr>
+          <td></td><td></td><td><a href="/additionalaccounts.html" class="btn btn-primary">Add</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </fieldset>
+    <fieldset class="fs-border">
+      <legend class="fs-legend"><b>Streaming Services Subscriptions</b></legend>
+      <a href="/subscriptions.html" class="btn btn-primary manage-subscriptions">Manage Subscriptions</a>
+      <canvas id="myChart"></canvas>
+      <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Disney+', 'Hulu', 'Netflix', 'Pluto TV'],
+            datasets: [{
+              label: 'Usage Comparison',
+              data: [20, 30, 50, 40],
+              backgroundColor: [
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)'
+              ],
+              borderColor: [
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)'
+              ],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero: true
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Number of Shows Watched'
+                },
+              }],
+              xAxes: [{
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Streaming Provider'
+                }
+              }]
+            }
+          }
+        });
+      </script>
+    </fieldset>
+  </main>
 
   <!-- ============================================================================================ -->
   <!-- footer -->
   <!-- ============================================================================================ -->
 
-  <footer class="footer py-5">
-    <div class="justify-content-around">
-      <hr>
-      <p class="copyright">MEGAStreaming Inc © 2020 All Rights Reserved</p>
-    </div>
+  <footer class="py-5">
+    <hr>
+    <p class="copyright">MEGAStreaming Inc © 2020 All Rights Reserved</p>
   </footer>
 
 
