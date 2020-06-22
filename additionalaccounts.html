@@ -23,6 +23,25 @@
 
     <title>MEGAStreaming</title>
 
+    <style> 
+
+      .fs-border {
+        width:auto;
+        
+      }
+
+      .container {
+        display:flex;
+        width:100%;
+      }
+
+      .container > div{
+        flex-grow:3;
+        flex-wrap:wrap;
+      }
+
+    </style>
+
   </head>
 
   <body>
@@ -99,10 +118,20 @@
   <!-- ============================================================================================ -->
 
   <div class="banner-select d-flex align-items-center justify-content-center pl-3 pl-lg-5 text-center">
+    <button class="btn-xl"> 
+      Save
+    </button>
+    <button class="btn-xl"> 
+      Delete
+    </button>
     <h1>
       Manage Additional Account
     </h1>
+    <button class="btn-xl"> 
+      Cancel
+    </button> 
   </div>
+
 
 <!-- end of title -->
 
@@ -112,6 +141,147 @@
   <!-- ============================================================================================ -->
   
   
+  <div class="container"> 
+    <div>
+
+      <fieldset class="fs-border">
+        <legend class="fs-legend"><b>User Profile</b></legend>
+        <div class="form-group">
+          <label for="user-name">User Name:</label>
+          <input type="text" id="user-name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" class="form-control">
+        </div>
+      </fieldset>
+    </div>
+
+    <div> 
+      
+
+      <fieldset class="fs-border">
+        <legend class="fs-legend"><b>Set Parental Controls</b></legend>
+        <div class="form-group">
+          <label for="user-name">Use Kid's Display</label>
+          <input type="text" id="kids_display" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="user-name">Under Age 7</label>
+          <input type="text" id="age_7" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="user-name">Age 7 - 13</label>
+          <input type="text" id="age7_13" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="user-name">Age 14 - 18</label>
+          <input type="text" id="age14_18" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="user-name">Adult</label>
+          <input type="text" id="adult" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="user-name">Can Make Purchases</label>
+          <input type="text" id="makepurchase" class="form-control">
+        </div>
+        
+      </fieldset>
+    </div>
+
+    <div> 
+      
+      <fieldset class="fs-border">
+        <legend class="fs-legend"><b>Set Access Limits</b></legend>
+        
+        <div class="form-group">
+          <label for="user-name">Monday</label>
+          <input type="text" id="makepurchase" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="user-name">Tuesday</label>
+          <input type="text" id="makepurchase" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="user-name">Wednesday</label>
+          <input type="text" id="makepurchase" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="user-name">Thursday</label>
+          <input type="text" id="makepurchase" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="user-name">Friday</label>
+          <input type="text" id="makepurchase" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="user-name">Saturday</label>
+          <input type="text" id="makepurchase" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="user-name">Sunday</label>
+          <input type="text" id="makepurchase" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="user-name">Start Time</label>
+          <input type="text" id="makepurchase" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="user-name">End Time</label>
+          <input type="text" id="makepurchase" class="form-control">
+        </div>
+        
+        
+
+      </fieldset>
+    </div>
+
+    <div> 
+      
+      <fieldset class="fs-border">
+        <legend class="fs-legend"><b>Review Viewing History</b></legend>
+        
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Child Account</th>
+              <th scope="col">Add/Edit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mrs. Jeb</td><td>No</td><td><a href="additionalaccounts.html" class="btn btn-primary">Edit</a></td>
+            </tr>
+            <tr>
+              <td>Jeb Jr</td><td>Yes</td><td><a href="additionalaccounts.html" class="btn btn-primary">Edit</a></td>
+            </tr>
+            <tr>
+              <td></td><td></td><td><a href="additionalaccounts.html" class="btn btn-primary">Add</a></td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </fieldset>
+    </div>
+  </div>
 
  
   <!-- ============================================================================================ -->
